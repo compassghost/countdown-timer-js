@@ -1,0 +1,34 @@
+
+.countdown-timer > div {
+	display: flex;
+	flex-wrap: no-wrap;
+	justify-content: space-between;
+	text-align: left;
+}
+.countdown-timer > div > div:last-child {
+	text-align: right;
+}
+
+.countdown-timer > div > div > span.normal {
+	display: inline;
+}
+.countdown-timer > div:hover > div > span.normal {
+	display: none;
+}
+.countdown-timer > div > div > span.mouseover {
+	display: none;
+}
+.countdown-timer > div:hover > div > span.mouseover {
+	display: inline;
+}
+
+.countdown-timer > div > div {
+	flex-direction: row;
+	flex: 1 1 auto;
+}
+
+
+.countdown-timer > div > div {
+	flex-direction: row;
+	flex: 1 1 auto;
+}
