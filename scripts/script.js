@@ -1,5 +1,9 @@
 window.onload = function() {
 	addTimer(
+			"Last New Year's", 
+			"lastnewyears", 
+			createUTCDate(2018, 1, 1, 0, 0));
+	addTimer(
 			"Midnight UTC", 
 			"midnight", 
 			getNextUTC.bind(null,));
