@@ -12,6 +12,10 @@ function padTime(n) {
 var keys = new Object();
 var timers = [];
 var deployedTimers = [];
+var timerTrigger = null;
+function wireTrigger(trigger) {
+	this.timerTrigger = trigger;
+}
 
 function addTimer(displayText, timerId, startDay, endDay) {
 	if(endDay) {
@@ -104,6 +108,8 @@ function createTimer(displayText, timerId, targetDay, suffix, noteSuffix) {
  
   //alert function
   if(distance > 0 && distance <= 1000) {
+	  if(timerTrigger)
+		  timerTrigger;
 	  notifyMe(sendNotification.bind(null, notText, noteSuffix));
   }
 
