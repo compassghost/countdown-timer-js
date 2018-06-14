@@ -209,17 +209,7 @@ function getNextDay(dayOfWeek) {
 
 //create a UTC date using YMDH
 function createUTCDate(year, month, day, hour, minutes, seconds) {
-	var date = new Date();
-	date.setUTCFullYear(year);
-	date.setUTCDate(1);
-	date.setUTCMonth(month - 1);
-	date.setUTCDate(day);
-	date.setUTCHours(hour ? hour : 0);
-	date.setUTCMinutes(minutes ? minutes : 0);
-	date.setUTCSeconds(seconds ? seconds: 0);
-	date.setUTCMilliseconds(0);
-	
-	return date;
+	return new Date(Date.UTC(year, month - 1, day, hour, minutes, seconds, 0));
 }
 
 //create a timer timerId with name itemName that spans from startDay to endDay, and removes itself once it expires
